@@ -19,18 +19,22 @@
     "@emotion/react": "^11.10.0",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@hello-pangea/dnd": "^16.3.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.3",
     "@reduxjs/toolkit": "^1.8.3",
-    "next": "12.2.4",
+    "framer-motion": "^10.12.18",
+    "next": "^12.2.4",
     "nprogress": "^0.2.0",
     "react": "18.2.0",
+    "react-beautiful-dnd": "^13.1.1",
     "react-dom": "18.2.0",
+    "react-draggable": "^4.4.5",
     "react-hot-toast": "^2.3.0",
     "react-redux": "^8.0.2"
   },
   "devDependencies": {
     "eslint": "8.21.0",
-    "eslint-config-next": "12.2.4"
+    "eslint-config-next": "^12.0.4"
   }
 }

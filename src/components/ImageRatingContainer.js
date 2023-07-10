@@ -1,24 +1,27 @@
-// components/ImageRatingContainer.js
-
 import { Box } from "@mui/material";
 import ImageRatingSection from "./ImageRatingSection";
+import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
+import { useState } from "react";
 
 export default function ImageRatingContainer({ imageSets }) {
   return (
     <Box
+      className="image-rating-container-wrapper image-rating-container"
       sx={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "center",
-        mt: 3,
-        width: "100%",
-        height: "100%",
-        overflow: "auto",
+        height: "100vh",
+        gridRow: "3",
+        gridColumn: "1 / -1",
+        overflow: "hidden",
       }}
     >
       {imageSets.map((imageSet, index) => (
-        <ImageRatingSection key={index} imageSet={imageSet} />
+        <ImageRatingSection
+          key={index}
+          id={index}
+          imageSet={imageSet}
+          imageSets={imageSets}
+          index={index}
+        />
       ))}
     </Box>
   );

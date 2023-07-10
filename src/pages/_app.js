@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Router from "next/router";
 import { Toaster } from "react-hot-toast";
+import { DragDropContext } from "react-beautiful-dnd";
 import { Provider as ReduxProvider } from "react-redux";
 import nProgress from "nprogress";
 import { CacheProvider } from "@emotion/react";
@@ -9,6 +10,8 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { store } from "@store";
 import { createTheme } from "@theme";
 import { createEmotionCache } from "@utils/create-emotion-cache";
+import "../css/styles.css";
+// import { DragDropContext } from "react-beautiful-dnd";
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);

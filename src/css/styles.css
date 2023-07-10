@@ -1,0 +1,65 @@
+.header {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.preference-box {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.image-rating-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  grid-gap: 80px;
+  padding: 0px 100px;
+}
+
+.image-rating-card-column-wrapper.image-rating-card-column-1 > * {
+  background: white !important;
+  display: none;
+}
+
+.image-rating-card-column-wrapper.image-rating-card-column-2 > * {
+  background: white !important;
+  display: none;
+}
+
+.image-rating-card-column-wrapper {
+  background: rgb(235, 236, 240);
+}
+
+.image-rating-card-wrapper {
+  cursor: grab;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, min-content);
+  margin: 10px 20px;
+  padding: 10px 10px;
+  background-color: white;
+}
+
+.image-rating-card-wrapper img {
+  height: 250px;
+  width: 100%;
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.image-rating-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  justify-content: center;
+  padding: 10px;
+}
+
+.image-rating-slider {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
