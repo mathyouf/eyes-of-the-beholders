@@ -1,13 +1,18 @@
-.header {
-  grid-column: 2;
-  grid-row: 1;
+body {
+  background: linear-gradient(to bottom, #0d00ff29, #ebff006e);
+}
+/* 1. HEADER AND PREFERENCE BOX  */
+.preference-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .preference-box {
-  grid-column: 2;
-  grid-row: 2;
+  justify-self: center;
+  align-self: center;
 }
 
+/* 2. IMAGE RATING CONTAINER */
 .image-rating-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -17,21 +22,91 @@
   grid-gap: 80px;
   padding: 0px 100px;
 }
-
-.image-rating-card-column-wrapper.image-rating-card-column-1 > * {
-  background: white !important;
-  display: none;
+/* 2.1. RATING SECTION */
+.section-wrapper {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.image-rating-card-column-wrapper.image-rating-card-column-2 > * {
-  background: white !important;
-  display: none;
-}
-
-.image-rating-card-column-wrapper {
+/* .image-rating-card-column-wrapper {
   background: rgb(235, 236, 240);
+} */
+
+.train-button {
+  width: 60%;
+  justify-self: center;
+  height: 60px;
 }
 
+.visualization-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.section-wrapper-1.button-clicked-false .image-rating-card-column-wrapper {
+  background: transparent;
+}
+
+.section-wrapper-1.visualization-done-false .image-rating-card-wrapper {
+  display: none;
+}
+
+.section-wrapper-1.visualization-done-false .section-title {
+  display: none;
+}
+
+.section-wrapper-1.button-clicked-true .train-button {
+  display: none;
+}
+
+.section-wrapper-1.visualization-done-true .image-rating-card-wrapper {
+  display: grid;
+  background: white;
+}
+
+.section-wrapper-1.visualization-done-true .section-title {
+  display: grid;
+}
+
+.section-wrapper-2 .image-rating-card-column-wrapper {
+  background: transparent;
+  display: none;
+}
+
+.section-wrapper-1.visualization-done-true ~ .section-wrapper-2 {
+  display: flex;
+}
+
+.section-wrapper-1.visualization-done-true
+  ~ .section-wrapper-2.visualization-done-false
+  .image-rating-card-column-wrapper {
+  display: grid;
+}
+
+.section-wrapper-2.visualization-done-false
+  .image-rating-card-column-wrapper
+  .image-rating-card-wrapper {
+  display: none;
+}
+
+.section-wrapper-2.visualization-done-false .section-title {
+  display: none;
+}
+
+.section-wrapper-2.button-clicked-true .train-button {
+  display: none;
+}
+
+.section-wrapper-2.visualization-done-true .image-rating-card-column-wrapper {
+  display: grid;
+}
+.section-wrapper-2.visualization-done-true .section-title {
+  display: grid;
+}
+/* 2.2. IMAGE RATING CARD */
 .image-rating-card-wrapper {
   cursor: grab;
   display: grid;
@@ -40,6 +115,9 @@
   margin: 10px 20px;
   padding: 10px 10px;
   background-color: white;
+  position: relative;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
 }
 
 .image-rating-card-wrapper img {
@@ -47,6 +125,8 @@
   width: 100%;
   grid-column: 1 / -1;
   grid-row: 1;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
 }
 
 .image-rating-box {
@@ -62,4 +142,5 @@
 .image-rating-slider {
   grid-column: 1 / -1;
   grid-row: 3;
+  color: blueviolet;
 }

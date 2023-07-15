@@ -1,7 +1,5 @@
 import { Box } from "@mui/material";
 import ImageRatingSection from "./ImageRatingSection";
-import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
-import { useState } from "react";
 
 export default function ImageRatingContainer({ imageSets }) {
   return (

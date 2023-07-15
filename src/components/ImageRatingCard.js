@@ -9,10 +9,18 @@ export default function ImageRatingCard({
   updateRating,
   disableDragging,
 }) {
-  const [sliderValue, setSliderValue] = useState(image["scores"][0].value);
+  const [sliderValue, setSliderValue] = useState(
+    image && image["scores"] && image["scores"][0]
+      ? image["scores"][0].value
+      : 0
+  );
 
   useEffect(() => {
-    setSliderValue(image["scores"][0].value);
+    setSliderValue(
+      image && image["scores"] && image["scores"][0]
+        ? image["scores"][0].value
+        : 0
+    );
   }, [image]);
 
   // console.log(image["scores"]);
